@@ -1,0 +1,132 @@
+Table container */
+.table-wrapper {
+  width: 100%; 
+  max-height: 500px; /* Define the max height for scrolling */
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+
+  
+}
+
+/* Table header */
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #16a085;
+  color: white;
+  z-index: 10; /* Ensure header stays on top */
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+/* Table body */
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ecf0f1;
+}
+
+td {
+  padding: 14px;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #eafaf1;
+  cursor: pointer;
+}
+
+/* Status styling */
+.status {
+  padding: 8px 12px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.status.approved {
+  background-color: #16a085;
+  color: #ffffff;
+}
+
+.status.declined {
+  background-color: #e74c3c;
+  color: #ffffff;
+}
+
+.status.pending {
+  background-color: #f39c12;
+  color: #ffffff;
+}
+
+/* Button styling */
+button {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border: none;
+  margin-right: 8px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:first-child {
+  background-color: #16a085;
+  color: white;
+}
+
+button:first-child:hover {
+  background-color: #1abc9c;
+}
+
+button:last-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button:last-child:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  th, td {
+    padding: 12px;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+}
